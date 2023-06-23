@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Mail{% endblock %}</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/litera/bootstrap.min.css" integrity="sha384-enpDwFISL6M3ZGZ50Tjo8m65q06uLVnyvkFO3rsoW0UC15ATBFz3QEhr3hmxpYsn" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'mail/styles.css' %}">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+        <style>
+            body {
+                margin-left: 150px;
+                margin-top: 50px;
+            }
+
+            h1 {
+                background-color: rgb(255, 255, 255);
+                padding: 10px;
+            }
+
+            .pole {
+                width: 1000px;
+            }
+
+            input[type="submit"] {
+                background-color: lightcoral;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+            }
+        </style>
+        {% block script %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
